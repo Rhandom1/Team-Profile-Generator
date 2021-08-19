@@ -1,0 +1,26 @@
+{
+  "name": "Team-Profile-Generator",
+  "version": "1.0.0",
+  "description": "## Your Task",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rhandom1/Team-Profile-Generator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rhandom1/Team-Profile-Generator/issues"
+  },
+  "homepage": "https://github.com/Rhandom1/Team-Profile-Generator#readme",
+  "devDependencies": {
+    "jest": "^27.0.6"
+  }
+}
