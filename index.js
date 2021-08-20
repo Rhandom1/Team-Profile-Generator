@@ -41,44 +41,44 @@ const engineerQuestions = [
     {
         type: "input",
         message: "Please enter the employee's name.",
-        name: "engName"
+        name: "name"
     },
     {
         type: "input",
         message: "Please enter the employee's id.",
-        name: "engId"
+        name: "id"
     },
     {
         type: "input",
         message: "Please enter the employee's email.",
-        name: "engEmail"
+        name: "email"
     },
     {
         type: "input",
         message: "Please enter the employee's gitHub username.",
-        name: "engGit"
+        name: "gitHub"
     },
 ];
 const internQuestions = [
     {
         type: "input",
         message: "Please enter the intern's name.",
-        name: "intName"
+        name: "name"
     },
     {
         type: "input",
         message: "Please enter the intern's id.",
-        name: "intId"
+        name: "id"
     },
     {
         type: "input",
         message: "Please enter the intern's email.",
-        name: "intEmail"
+        name: "email"
     },
     {
         type: "input",
         message: "Please enter the intern's school.",
-        name: "intSchool"
+        name: "school"
     },
 ];
 
@@ -113,10 +113,11 @@ function addEmployee() {
         }
     })
 }
+addManager();
 
 function addEngineer() {
     inquirer.prompt(engineerQuestions).then((response) => {
-        const engineer = new Engineer (response.name, response.id, response.email, response.engGit);
+        const engineer = new Engineer (response.name, response.id, response.email, response.gitHub);
         engArray.push(engineer)
         //call the next function here
         addEmployee();
@@ -126,14 +127,14 @@ function addEngineer() {
 
 function addIntern() {
     inquirer.prompt(internQuestions).then((response) => {
-        const intern = new Intern (response.name, response.id, response.email, response.intSchool);
+        const intern = new Intern (response.name, response.id, response.email, response.school);
         intArray.push(intern)
         //call the next function here
         addEmployee();
     
     })
 }
-addManager();
+
 
 function buildHTML() {
     fs.writeFile("generateHTML.html", `
@@ -196,7 +197,7 @@ function createEngineerCard () {
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item">ID: ${element.id}</li>
                             <li class="list-group-item">email: ${element.email}</li>
-                            <li class="list-group-item">Office: ${element.gitHub}</li>
+                            <li class="list-group-item">gitHub: ${element.gitHub}</li>
                         </ul>
                     </div>
         `
@@ -215,7 +216,7 @@ function createInternCard () {
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item">ID: ${element.id}</li>
                             <li class="list-group-item">email: ${element.email}</li>
-                            <li class="list-group-item">Office: ${element.school}</li>
+                            <li class="list-group-item">School: ${element.school}</li>
                         </ul>
                     </div>
         `
