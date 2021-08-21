@@ -177,7 +177,7 @@ function createManagerCard () {
                         <h5 class="card-header">${element.name}<br /><br />${element.getRole()}</h5>
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item">ID: ${element.id}</li>
-                            <li class="list-group-item">email: ${element.email}</li>
+                            <li class="list-group-item"><a href="mailto:${element.email}">email: ${element.email}</a></li>
                             <li class="list-group-item">Office: ${element.officeNumber}</li>
                         </ul>
                     </div>
@@ -196,8 +196,8 @@ function createEngineerCard () {
                         <h5 class="card-header">${element.name}<br /><br />${element.getRole()}</h5>
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item">ID: ${element.id}</li>
-                            <li class="list-group-item">email: ${element.email}</li>
-                            <li class="list-group-item">gitHub: ${element.gitHub}</li>
+                            <li class="list-group-item"><a href="mailto:${element.email}">email: ${element.email}</a></li>
+                            <li class="list-group-item"><a href="https://github.com/${element.gitHub}">gitHub: ${element.gitHub}</a></li>
                         </ul>
                     </div>
         `
@@ -215,7 +215,7 @@ function createInternCard () {
                         <h5 class="card-header">${element.name}<br /><br />${element.getRole()}</h5>
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item">ID: ${element.id}</li>
-                            <li class="list-group-item">email: ${element.email}</li>
+                            <li class="list-group-item"><a href="mailto:${element.email}">email: ${element.email}</a></li>
                             <li class="list-group-item">School: ${element.school}</li>
                         </ul>
                     </div>
@@ -224,17 +224,3 @@ function createInternCard () {
     }
     return intern;
 }
-
-// function writeToFile(fileName, data) {
-//     fs.writeFile(fileName, data, (err) => {
-//         err ? console.log (err) : console.log("Answers received!")
-//     })
-// }
-
-// function init() {
-//     inquirer.prompt(questions).then((response) => {
-//         writeToFile("index.html", )
-//     })
-// }
-
-// init();
