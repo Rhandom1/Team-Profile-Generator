@@ -144,7 +144,14 @@ function buildHTML() {
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+      integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V"
+      crossorigin="anonymous"
+    />
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="src/style.css">
         <title>Team Profile</title>
     </head>
     <body>
@@ -174,7 +181,7 @@ function createManagerCard () {
         const element = managerArray[i];
         manager += `
         <div class="card mx-auto" style="width: 18rem">
-                        <h5 class="card-header">${element.name}<br /><br />${element.getRole()}</h5>
+                        <h5 class="card-header">${element.name}<br /><br />${element.getRole()} <i class="fas fa-glasses"></i></h5>
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item">ID: ${element.id}</li>
                             <li class="list-group-item"><a href="mailto:${element.email}">email: ${element.email}</a></li>
@@ -193,7 +200,7 @@ function createEngineerCard () {
         const element = engArray[i];
         engineer += `
         <div class="card mx-auto" style="width: 18rem">
-                        <h5 class="card-header">${element.name}<br /><br />${element.getRole()}</h5>
+                        <h5 class="card-header">${element.name}<br /><br />${element.getRole()} <i class="fas fa-coffee"></h5>
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item">ID: ${element.id}</li>
                             <li class="list-group-item"><a href="mailto:${element.email}">email: ${element.email}</a></li>
@@ -212,7 +219,7 @@ function createInternCard () {
         const element = intArray[i];
         intern += `
         <div class="card mx-auto" style="width: 18rem">
-                        <h5 class="card-header">${element.name}<br /><br />${element.getRole()}</h5>
+                        <h5 class="card-header">${element.name}<br /><br />${element.getRole()} <i class="fas fa-user-graduate"></i></h5>
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item">ID: ${element.id}</li>
                             <li class="list-group-item"><a href="mailto:${element.email}">email: ${element.email}</a></li>

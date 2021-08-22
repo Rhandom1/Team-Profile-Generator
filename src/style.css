@@ -1,0 +1,9 @@
+body .navbar {
+    background-color: coral;
+}
+
+body .card-header {
+    background-color: darkblue;
+    color:navajowhite;
+    text-align: center;
+}
