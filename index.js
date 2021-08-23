@@ -200,11 +200,11 @@ function createEngineerCard () {
         const element = engArray[i];
         engineer += `
         <div class="card mx-auto" style="width: 18rem">
-                        <h5 class="card-header">${element.name}<br /><br />${element.getRole()} <i class="fas fa-coffee"></h5>
+                        <h5 class="card-header">${element.name}<br /><br />${element.getRole()} <i class="fas fa-laptop-code"></i></h5>
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item">ID: ${element.id}</li>
                             <li class="list-group-item"><a href="mailto:${element.email}">email: ${element.email}</a></li>
-                            <li class="list-group-item"><a href="https://github.com/${element.gitHub}">gitHub: ${element.gitHub}</a></li>
+                            <li class="list-group-item"><a href="https://github.com/${element.gitHub}" target="_blank">gitHub: ${element.gitHub}</a></li>
                         </ul>
                     </div>
         `
